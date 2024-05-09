@@ -175,9 +175,8 @@ function! UVMTest(name)
         let name_temp = "base_test"
         let parent_name = "uvm_test"
     else
-        " let a:name_temp = a:name . "_test"
-        let name_temp = "test"
-        let parent_name = "base_base"
+        let name_temp = a:name . "_test"
+        let parent_name = "base"
     endif
     call <SID>TExpand("NAME", name_temp)
     call <SID>TExpand("PARENT", parent_name)
